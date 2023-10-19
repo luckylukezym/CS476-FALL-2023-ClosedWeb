@@ -1,74 +1,60 @@
 <!DOCTYPE html>
 <html>
- <head>
-   <title>Sign Up</title>
-   <meta charset = "utf-8">
-   <link rel="stylesheet" href="Style.css">
-   <style>.err_msg
-       {
-           color:red; 
-           text-decoration:underline;
-           
-       }</style>
+<head>
+   <meta charset = "UTF-8">
+   <meta name = "viewpoint" content = "width=device-width, initial-scale=1.0">
+   <title>Shopping Website Main Page</title>
+   <style>.error_msg
+    {
+        color: red; 
+        text-decoration: underline;
+        
+    }</style>
+
+</head>
+
+<body>
+   <header>
+    <h1>Main Page</h1>
+</header>
+<main>
+<h2>Login</h2>
+<form method="post" action="shopmain.html" id="login">
+  <table>
+    <tr>
+        <td>&nbsp;</td>
+        <td><label id="error_msg"></label></td>
+    </tr>
+    <tr>
+        <td>Email: </td>
+        <td><input type="text" name="email" size="25"></td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td><label id="msg_pswd" class="error_msg"></label></td>
+    </tr>
+
+<tr>
+    <td>Password: </td>
+    <td><input type="text" name="pswd" size="15"></td>
+</tr>
+  </table>
+  <input type="submit" value="Login">
+
+
+</form>
+
+<h3><a href="Signup.html">No account? Sign up now</h3>
+
+    
 
 
 
- </head>
 
- <body>
-  <header>
-    <h1>Sign Up</h1>
-  </header>
+</main>
 
 
-  <main>
-    <form id="Signup" method="post" action="shopmain.html">
-        <table>
-            <tr>
-				<td>&nbsp;</td>
-				<td><label id="msg_email" class="err_msg"></label></td>
-			</tr>
-			<tr>
-				<td>Email: </td>
-				<td> <input type="text" name="email" size="30" /></td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td><label id="msg_uname" class="err_msg"></label></td>
-			</tr>
-			<tr>
-				<td>Username: </td>
-				<td> <input type="text" name="uname" size="30" /></td>
-			</tr>
 
-			<tr>
-				<td>&nbsp;</td>
-				<td><label id="msg_pswd" class="err_msg"></label></td>
-			</tr>
-			<tr>
-				<td>Password: </td>
-				<td> <input type="password" name="pswd" size="15" /></td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td><label id="msg_pswdr" class="err_msg"></label></td>
-			</tr>
-			<tr>
-				<td>Confirm Password: </td>
-				<td> <input type="password" name="pswdr" size="15" /></td>
-			</tr>
-
-        </table>
-
-		<input type="submit" value="Sign up" />
-		<input type="reset" value="Reset" />
-
-    </form>
-  </main>
-  <p><a href="shopmain.html"></a></p>
-
- </body>
-
-
+</body>
 
 </html>

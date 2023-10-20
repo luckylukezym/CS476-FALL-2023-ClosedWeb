@@ -1,74 +1,76 @@
 <!DOCTYPE html>
 <html>
- <head>
+<head>
    <title>Sign Up</title>
    <meta charset = "utf-8">
    <link rel="stylesheet" href="Style.css">
-   <style>.err_msg
-       {
-           color:red; 
-           text-decoration:underline;
-           
-       }</style>
+</head>
 
+<body>
+	<div id="grided">
+	<header id="header-auth">
+		<h1>Sign Up</h1>
+	</header>
 
+	<div id="main-left"></div>
 
- </head>
+	<main id="main-center">
+		<form id="Signup" method="post" action="shopmain.html">
+			<table>
+				<tr>
+					<td>&nbsp;</td>
+					<td><label id="msg_email" class="err_msg"></label></td>
+				</tr>
+				<tr>
+					<td>Email: </td>
+					<td> <input type="text" name="email" size="30" /></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td><label id="msg_uname" class="err_msg"></label></td>
+				</tr>
+				<tr>
+					<td>Username: </td>
+					<td> <input type="text" name="uname" size="30" /></td>
+				</tr>
 
- <body>
-  <header>
-    <h1>Sign Up</h1>
-  </header>
+				<tr>
+					<td>&nbsp;</td>
+					<td><label id="msg_pswd" class="err_msg"></label></td>
+				</tr>
+				<tr>
+					<td>Password: </td>
+					<td> <input type="password" name="pswd" size="15" /></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td><label id="msg_pswdr" class="err_msg"></label></td>
+				</tr>
+				<tr>
+					<td>Confirm Password: </td>
+					<td> <input type="password" name="pswdr" size="15" /></td>
+				</tr>
 
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
 
-  <main>
-    <form id="Signup" method="post" action="shopmain.html">
-        <table>
-            <tr>
-				<td>&nbsp;</td>
-				<td><label id="msg_email" class="err_msg"></label></td>
-			</tr>
-			<tr>
-				<td>Email: </td>
-				<td> <input type="text" name="email" size="30" /></td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td><label id="msg_uname" class="err_msg"></label></td>
-			</tr>
-			<tr>
-				<td>Username: </td>
-				<td> <input type="text" name="uname" size="30" /></td>
-			</tr>
+				<tr>
+					<td>
+						<input type="submit" value="Sign up" id="buttons" class="changeColor"/>
+						<input type="reset" value="Reset" id="buttons" class="changeColor"/>
+					</td>
+				</tr>
+			</table>
 
-			<tr>
-				<td>&nbsp;</td>
-				<td><label id="msg_pswd" class="err_msg"></label></td>
-			</tr>
-			<tr>
-				<td>Password: </td>
-				<td> <input type="password" name="pswd" size="15" /></td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td><label id="msg_pswdr" class="err_msg"></label></td>
-			</tr>
-			<tr>
-				<td>Confirm Password: </td>
-				<td> <input type="password" name="pswdr" size="15" /></td>
-			</tr>
+		</form>
+	</main>
 
-        </table>
+	<div id="main-right"></div>
 
-		<input type="submit" value="Sign up" />
-		<input type="reset" value="Reset" />
-
-    </form>
-  </main>
-  <p><a href="shopmain.html"></a></p>
-
- </body>
-
-
+	<a href="shopmain1.html">Shopmain page</a>
+	
+	</div>
+</body>
 
 </html>

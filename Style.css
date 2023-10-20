@@ -1,0 +1,140 @@
+/* 
+    Common CSS styles for all the files begins
+*/
+
+body {
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* unvisited link */
+a:link {
+    color: rgb(0, 162, 255);
+}
+  
+/* visited link */
+a:visited {
+    color: rgb(135, 35, 202);
+}
+  
+/* mouse over link */
+a:hover {
+    color: rgb(255, 105, 138);
+}
+  
+/* selected link */
+a:active {
+    color: rgb(255, 251, 0);
+}
+
+/* error message */
+.err_msg{
+    color:red; 
+    text-decoration:underline;    
+}
+
+/* 
+    Common CSS styles for all the files ends
+*/
+
+/* 
+    CSS styles for Signup page begins
+*/
+
+#grided {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-rows: 150px auto 100px;
+    grid-gap: 2px;
+
+    /* vh: viewport height */
+    min-height: 100vh;
+    
+    /* vw: viewport width */
+    width: 100vw;
+}
+
+#header-auth {
+    background: linear-gradient(to bottom, rgba(168, 97, 3, 0.473), rgb(168, 97, 3));
+    color: white;
+    width: 100%;
+    height: 100%;
+
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+ 
+header h1 {
+    font-size: 70px;
+    text-align: center;
+}
+
+#main-left {
+    background: linear-gradient(to left, rgba(207, 186, 159, 0.26), rgb(207, 186, 159));
+    width: 100%;
+    height: 100%;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#main-center {
+    margin: auto;
+    margin-top: 80px;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#main-right {
+    background: linear-gradient(to right, rgba(207, 186, 159, 0.26), rgb(207, 186, 159));
+    width: 100%;
+    height: 100%;
+
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#Signup {
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 0px 20px 40px 20px;
+    width: 100%;
+}
+
+/* button adjustment */
+#buttons {
+    float: left;
+}
+
+/* unvisited button */
+.changeColor {
+    background-color: rgb(117, 49, 3);
+    border-color: gray;
+    border-width: 2px;
+    border-radius: 3px;
+    width: 100%;
+    font-size: large;
+    color: white;
+}
+
+/* mouse over button */
+.changeColor:hover {
+    background-color: rgba(255, 174, 0, 0.801);
+    color: black;
+}
+
+/* 
+    CSS styles for Signup page ends
+*/
+

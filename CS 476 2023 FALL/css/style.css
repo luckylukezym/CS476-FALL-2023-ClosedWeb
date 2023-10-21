@@ -1,0 +1,29 @@
+body {
+  margin: 0px;
+    background: linear-gradient(120deg, #90d3ff, #dfa2fa);
+
+}
+
+header {
+
+  padding: 30px;
+  justify-content: space-between;
+  align-items:center
+}
+
+.logo {
+  cursor: pointer;
+  order: 3;
+  margin-left: auto;
+}
+
+nav {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #24252a;
+
+  font-family: "Montserrat",sans-serif;
+  color: #edf0f1;
+
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check to pay</title>
+    <meta charset = "utf-8">
+
+</head>
+
+<body>
+<header>
+    <h1>Your Cart</h1>
+</header>
+    
+    <p>Username</p>
+ 
+    <form id="checklist" method="post">
+        <section style="border: 1px solid black;">
+        <input type="checkbox" id="item1" name="item1">
+        <label for="item1">
+            <img
+                src="905899_2_2000x.jpg.webp"
+                alt="shoe-img"
+                width="250"
+                height="250"
+            />
+            <h3>Title for the product</h3>
+            <p>999.99$</p>
+        </label><br><br>
+        </section>
+        
+        <section style="border: 1px solid black;">
+        <input type="checkbox" id="item2" name="item2">
+        <label for="item2">
+            <img
+                src="905899_2_2000x.jpg.webp"
+                alt="shoe-img"
+                width="250"
+                height="250"
+            />
+            <h3>Title for the product</h3>
+            <p>999.99$</p>
+        </label><br><br>
+        </section>
+
+        <section style="border: 1px solid black;">
+        <input type="checkbox" id="item3" name="item3">
+        <label for="item3">
+            <img
+                src="905899_2_2000x.jpg.webp"
+                alt="shoe-img"
+                width="250"
+                height="250"
+            />
+            <h3>Title for the product</h3>
+            <p>999.99$</p>
+        </label><br><br>
+        </section>
+
+        <br><br>
+
+        <h2>Pay Order</h2>
+        <label for="cards">Choose a card:</label>
+        <select name="cards" id="cards">
+            <option value="Credit">Credit</option>
+            <option value="Debit">Debit</option>
+            <option value="Charge">Charge</option>
+            <option value="Prepaid">Prepaid</option>
+        </select>
+        <br>
+        <input type="text" placeholder="0000-0000-0000-0000"><br><br>
+
+        <label for="cname">Name on Card:</label><br>
+        <input type="text" placeholder="Stephen Anderson"><br><br>
+
+        <label for="expDate">Exp date:</label><br>
+        <input type="text" placeholder="month/year"><br><br>
+
+        <label for="CVV">CVV:</label><br>
+        <input type="text" placeholder="000"><br><br><br>
+
+        <input type="submit" value="Checkout">
+
+    </form>
+
+    <br><br>
+</body>
+</html>

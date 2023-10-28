@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Page</title>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Control Menu</h2>
+        <!-- action后续改成服务器的地址-->
+        <form action="/path/to/server" method="POST">
+            <div class="form-group">
+                <label for="productId">product id:</label>
+                <input type="text" id="productId" name="productId" required placeholder="enter product Id">
+            </div>
+            
+            <div class="form-group">
+                <label for="productQuantity">product number:</label>
+                <input type="number" id="productQuantity" name="productQuantity" required placeholder="enter product number">
+            </div>
+
+            <div class="form-group">
+                <label for="productPrice">product price</label>
+                <input type="text" id="productPrice" name="productPrice" required placeholder="enter product price">
+            </div>
+
+            <input type="submit" value="submit">
+        </form>
+    </div>
+</body>
+</html>

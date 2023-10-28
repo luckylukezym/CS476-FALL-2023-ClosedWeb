@@ -17,7 +17,7 @@
     display: grid;
     text-align:center;
     grid-template-columns: 2fr;
-    grid-template-rows: 400px ;
+    grid-template-rows: 500px ;
     border:1px solid #ddd;
   
     background-color: rgb(250, 239, 239);

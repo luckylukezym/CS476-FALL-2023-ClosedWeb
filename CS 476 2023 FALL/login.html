@@ -1,30 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Form</title>
-    <link rel="stylesheet" href="css/login-style.css" />
-  </head>
-  <body>
-    <div class="center">
-      <h1>Login</h1>
-      <form action="#" method="post">
-        <div class="txt_field">
-          <input type="text" required />
-          <span></span>
-          <label>Username</label>
-        </div>
-        <div class="txt_field">
-          <input type="password" required />
-          <span></span>
-          <label>Password</label>
-        </div>
-        <div class="pass">Forgot Password?</div>
-        <input type="submit" value="Login" />
-        <div class="signup_link">Not a member? <a href="#">Sign up</a></div>
+<html>
+<head>
+   <title>Login</title>
+   <meta charset = "utf-8">
+   <link rel="stylesheet" href="CSS/index-style.css">
+   <link rel="stylesheet" href="CSS/login-style.css">
+</head>
+
+<body>
+    <header>
+      <nav>
+          <ul class="nav">
+              <li><div class="navlogo"><a href="index.html">CLOTHES</a></div></li>
+              <li><div class="navlogo">|</div></li>
+              <li><a href="customer-page.html" class="Button">About Me</a></li>
+              <li><a href="sign-up.html" class="Button">Sign up</a></li>
+              <li><a href="login.html" class="Button">Login</a></li>
+              <li class="navuser"><a href="check-to-pay.html">Cart</a></li>
+              <li class="navuser">|</li>
+              <li class="navuser">USER 1 </li>
+          </ul>
+      </nav>
+      </header>
+
+
+  <div class="main">
+    <div class="left"></div>
+
+    <main class="main-center">
+      <form id="Login" method="post" action="index.html">
+        <table class="table">
+
+          <tr>
+            <td>&nbsp;</td>
+            <td><label id="msg_uname" class="err_msg"></label></td>
+          </tr>
+          <tr>
+            <td>Username: </td>
+            <td> <input type="text" name="uname" size="30" /></td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+            <td><label id="msg_pswd" class="err_msg"></label></td>
+          </tr>
+          <tr>
+            <td>Password: </td>
+            <td> <input type="password" name="pswd" size="30" /></td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>
+              <input type="submit" value="Login" id="buttons" class="changeColor"/>
+              <input type="reset" value="Reset" id="buttons" class="changeColor"/>
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td><a href="index.html">Back to Main page</a></td>
+          </tr>
+
+        </table>
       </form>
-    </div>
-  </body>
+    </main>
+
+    <div class="right"></div>
+
+  </div>
+
+</body>
+
 </html>

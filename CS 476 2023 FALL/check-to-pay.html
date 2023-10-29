@@ -3,85 +3,114 @@
 <head>
     <title>Check to pay</title>
     <meta charset = "utf-8">
+    <link rel="stylesheet" href="CSS/index-style.css">
+    <link rel="stylesheet" href="CSS/pay-style.css">
 
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Stylish">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 <header>
-    <h1>Your Cart</h1>
+    <nav>
+        <ul class="nav">
+            <li><div class="navlogo"><a href="index.html">CLOTHES</a></div></li>
+            <li><div class="navlogo">|</div></li>
+            <li><a href="customer-page.html" class="Button">About Me</a></li>
+            <li><a href="sign-up.html" class="Button">Sign up</a></li>
+            <li><a href="login.html" class="Button">Login</a></li>
+            <li class="navuser"><a href="check-to-pay.html">Cart</a></li>
+            <li class="navuser">|</li>
+            <li class="navuser">USER 1 </li>
+        </ul>
+    </nav>
 </header>
-    
-    <p>Username</p>
- 
-    <form id="checklist" method="post">
-        <section style="border: 1px solid black;">
-        <input type="checkbox" id="item1" name="item1">
-        <label for="item1">
-            <img
-                src="905899_2_2000x.jpg.webp"
-                alt="shoe-img"
-                width="250"
-                height="250"
-            />
-            <h3>Title for the product</h3>
-            <p>999.99$</p>
-        </label><br><br>
-        </section>
-        
-        <section style="border: 1px solid black;">
-        <input type="checkbox" id="item2" name="item2">
-        <label for="item2">
-            <img
-                src="905899_2_2000x.jpg.webp"
-                alt="shoe-img"
-                width="250"
-                height="250"
-            />
-            <h3>Title for the product</h3>
-            <p>999.99$</p>
-        </label><br><br>
-        </section>
 
-        <section style="border: 1px solid black;">
-        <input type="checkbox" id="item3" name="item3">
-        <label for="item3">
-            <img
-                src="905899_2_2000x.jpg.webp"
-                alt="shoe-img"
-                width="250"
-                height="250"
-            />
-            <h3>Title for the product</h3>
-            <p>999.99$</p>
-        </label><br><br>
-        </section>
+<h1>Your Cart</h1>
 
+<div class="main">
+    <form id="search">
+        <i class="fa fa-search"></i>
+        <input type="search" id="searchbar" placeholder="Search...">
         <br><br>
-
-        <h2>Pay Order</h2>
-        <label for="cards">Choose a card:</label>
-        <select name="cards" id="cards">
-            <option value="Credit">Credit</option>
-            <option value="Debit">Debit</option>
-            <option value="Charge">Charge</option>
-            <option value="Prepaid">Prepaid</option>
-        </select>
-        <br>
-        <input type="text" placeholder="0000-0000-0000-0000"><br><br>
-
-        <label for="cname">Name on Card:</label><br>
-        <input type="text" placeholder="Stephen Anderson"><br><br>
-
-        <label for="expDate">Exp date:</label><br>
-        <input type="text" placeholder="month/year"><br><br>
-
-        <label for="CVV">CVV:</label><br>
-        <input type="text" placeholder="000"><br><br><br>
-
-        <input type="submit" value="Checkout">
-
     </form>
 
+<div class="left"></div>
+<main class="main-center">
+        <form id="checklist" method="post">
+            <article>
+            <input type="checkbox" id="item1" name="item1" class="checkboxes">
+            <label for="item1">
+                <img
+                    src="file/1.jpg"
+                    alt="cloth1"
+                    class="images"
+                />
+                <h3>Title for the product</h3>
+                <p>999.99$</p>
+            </label><br><br>
+            </article>
+            
+            <article>
+            <input type="checkbox" id="item2" name="item2" class="checkboxes">
+            <label for="item2">
+                <img
+                    src="file/2.jpg"
+                    alt="cloth2"
+                    class="images"
+                />
+                <h3>Title for the product</h3>
+                <p>999.99$</p>
+            </label><br><br>
+            </article>
+
+            <article>
+            <input type="checkbox" id="item3" name="item3" class="checkboxes">
+            <label for="item3">
+                <img
+                    src="file/3.jpg"
+                    alt="cloth3"
+                    class="images"
+                />
+                <h3>Title for the product</h3>
+                <p>999.99$</p>
+            </label><br><br>
+            </article>
+        
+            <br><br>
+
+        </form>
+    </main>
+
+    <div class="checkpay">
+    <form id="payorder">
+        <h2>Pay Order</h2>
+            
+            <label for="cards">Choose a card:</label>
+            <select name="cards" id="cards">
+                <option value="Credit">Credit</option>
+                <option value="Debit">Debit</option>
+                <option value="Charge">Charge</option>
+                <option value="Prepaid">Prepaid</option>
+            </select>
+            <br>
+            <input type="text" placeholder="0000-0000-0000-0000"><br><br>
+
+            <label for="cname">Name on Card:</label><br>
+            <input type="text" placeholder="Stephen Anderson"><br><br>
+
+            <label for="expDate">Exp date:</label><br>
+            <input type="text" placeholder="month/year"><br><br>
+
+            <label for="CVV">CVV:</label><br>
+            <input type="text" placeholder="000"><br><br><br>
+            </div>
+
+            <input type="submit" value="Checkout" class="add-button">
+    </form>
+    </div>
     <br><br>
+    <div class="right"></div>
+</div>
 </body>
 </html>

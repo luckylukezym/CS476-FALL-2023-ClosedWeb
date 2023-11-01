@@ -1,54 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Comments Page</title>
-    <link rel="stylesheet" type="text/css" href="index-style.css" />
-    <link rel="stylesheet" type="text/css" href="comment-style.css" />
+    <title>Comments Page</title>
+    <link rel="stylesheet" type="text/css" href="css/index-style.css" />
+	<link rel="stylesheet" type="text/css" href="css/comment-style.css" />
 </head>
-
 <body>
     <div class="container">
-        <h2>User Comments</h2>
-
-        <!-- 一个示例评论区块 -->
-        <div class="comment">
-            <div class="user-comment">
-                <strong>Username:</strong> <span>John Doe</span><br>
-                <p>This is a user comment. The product was great!</p>
+        <h2>Product Comments</h2>
+        
+        <h3>Leave your comment:</h3>
+        <form action="/path/to/server" method="POST">
+            <textarea id="userComment" name="userComment" rows="4" required placeholder="Enter your comment here..."></textarea>
+            <br>
+            <input type="submit" value="Submit Comment">
+        </form>
+        
+        <h3>Comments:</h3>
+        <div class="comments-section">
+            <!-- 例子评论，实际数据应当从后端数据库动态加载 -->
+            <div class="comment">
+                <strong>[user name1]:</strong>
+                <p>This product is amazing!</p>
             </div>
-            <div class="admin-reply">
-                <strong>Admin Reply:</strong><br>
-                <p>Thanks for the feedback, John!</p>
+            <div class="comment">
+                <strong>[user name2]:</strong>
+                <p>Really helpful, thanks!</p>
             </div>
-        </div>
-
-        <!-- 一个示例评论区块 -->
-        <div class="comment">
-            <div class="user-comment">
-                <strong>Username:</strong> <span>Jane Smith</span><br>
-                <p>I had some issues with the product, please help!</p>
-            </div>
-            <div class="admin-reply">
-                <strong>Admin Reply:</strong><br>
-                <p>We apologize for the inconvenience. Please contact our support team.</p>
-            </div>
-        </div>
-
-        <!-- 管理员回复区块 -->
-        <div class="admin-reply-box">
-            <h3>Reply to a Comment</h3>
-            <form action="/path/to/server" method="POST">
-                <label for="replyComment">Your Reply:</label>
-                <textarea id="replyComment" name="replyComment" rows="4" required placeholder="Enter your reply here..."></textarea>
-                <br>
-                <input type="submit" value="Submit Reply">
-            </form>
+            <!-- 更多评论... -->
         </div>
     </div>
-
 </body>
-
 </html>

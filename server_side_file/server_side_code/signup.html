@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/index-style.css" />
+    <link rel="stylesheet" href="css/signup-style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul class="nav">
+          <li>
+            <div class="navlogo"><a href="index.php">CLOTHES</a></div>
+          </li>
+          <li><div class="navlogo">|</div></li>
+          <li><a href="" class="Button">About Me</a></li>
+          <li><a href="login.html" class="Button">Login</a></li>
+          <li class="navuser">not logged in</li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="main">
+      <div class="left"></div>
+
+      <main class="main-center">
+        <form id="Signup" method="post" action="signup_process.php">
+          <table class="table">
+            <tr>
+              <td>&nbsp;</td>
+              <td>
+                <label id="msg_email" class="err_msg hidden"
+                  >email need to be in correct format</label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Email:</td>
+              <td>
+                <input type="text" size="30" id="email-input" name="email" />
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td><label id="msg_uname" class="err_msg"></label></td>
+            </tr>
+            <tr>
+              <td>Username:</td>
+              <td><input type="text" size="30" name="username" required /></td>
+            </tr>
+
+            <tr>
+              <td>&nbsp;</td>
+              <td>
+                <label id="msg_pswd" class="err_msg hidden"
+                  >password need to conatin 8 to 10 characters</label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Password:</td>
+              <td>
+                <input
+                  type="password"
+                  name="password"
+                  size="15"
+                  id="password-input"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>
+                <label id="msg_pswdr" class="err_msg hidden"
+                  >password cannot be different</label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Confirm Password:</td>
+              <td><input type="password" size="15" id="repassword-input" /></td>
+            </tr>
+
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+
+            <tr>
+              <td>
+                <input
+                  type="submit"
+                  name="submit"
+                  value="Sign up"
+                  id="subimt-button"
+                  class="changeColor"
+                />
+                <input
+                  type="reset"
+                  value="Reset"
+                  id="reset-button"
+                  class="changeColor"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+          </table>
+        </form>
+      </main>
+
+      <div class="right"></div>
+    </div>
+  </body>
+</html>

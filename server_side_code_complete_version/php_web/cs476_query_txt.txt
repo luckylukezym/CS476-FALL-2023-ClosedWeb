@@ -1,0 +1,107 @@
+                                           // create users table
+create table users(
+    id int AUTO_INCREMENT,
+    username varchar(100),
+    password varchar(100),
+    email varchar(100),
+    PRIMARY key (id)
+);
+
+'
+
+                                           // create product table
+CREATE TABLE products(
+  id int auto_increment,
+  name varchar(100),
+  quantity int,
+  price int,
+  shipping int,
+  image_url text,
+  description text,
+  bone text,
+  btwo text,
+  bthree text,
+  primary key(id)
+);
+
+
+
+                                               // create cart item table
+create table cart_items(
+  id int auto_increment,
+  product_id int,
+  user_id int,
+  primary key (id),
+  foreign key (product_id) references products(id),
+  foreign key (user_id) references users(id)
+);
+
+                                               // create orders table
+create table orders(
+  id int auto_increment,
+  user_id int,
+  created_at timestamp default current_timestamp,
+  payment_method varchar(20),
+  card_number text,
+  primary key (id),
+  foreign key (user_id) references users(id)
+);
+
+
+                                           // create purchased items table
+create table purchased_items(
+   id int auto_increment,
+   product_id int,
+   order_id int,
+   primary key (id),
+   foreign key (product_id) references products(id),
+   foreign key (order_id) references orders(id)
+);
+
+
+
+                                           // create comments table
+create table comments(
+  id int auto_increment,
+  user_id int,
+  product_id int,
+  content text,
+  created_at timestamp default current_timestamp,
+  primary key (id),
+  foreign key (user_id) references users(id),
+  foreign key (product_id) references products(id)
+);
+
+ 
+                                               // create cells table
+create table cells(
+  id int auto_increment,
+  user_id int,
+  cell text,
+  primary key (id),
+  foreign key (user_id) references users(id)
+);
+
+
+
+                                                // create addresses table
+create table addresses(
+  id int auto_increment,
+  user_id int,
+  address text,
+  primary key (id),
+  foreign key (user_id) references users(id)
+);
+
+
+                                                   // complex query to get user cart item
+select name, sum(price) as total, count(*) as quantity, image_url from 
+cart_items left join products 
+on product_id = products.id
+where user_id = 7
+group by product_id, name, image_url;
+
+
+
+
+

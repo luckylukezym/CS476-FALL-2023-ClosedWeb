@@ -1,0 +1,107 @@
+.main {
+  width: auto;
+  height: 100px;
+
+  text-align: center;
+  margin: 10% auto;
+
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 20px 20px 20px 20px;
+  width: 50%;
+}
+
+.main-center {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 2fr;
+  grid-template-rows: 100px;
+  border: 1px solid #ddd;
+
+  background-color: rgb(250, 239, 239);
+  border-radius: 20px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* product css */
+
+.product-title {
+  height: 50px;
+  padding-top: 10px;
+}
+
+.price {
+  font-size: 26px;
+  font-weight: bolder;
+}
+
+.shipping {
+  color: #686767;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.list-header {
+  margin-bottom: 10px;
+}
+
+h2 {
+  background-color: #f7f7f7;
+  text-align: center;
+  font-weight: bold;
+}
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+  border-style: inset;
+  margin-bottom: 10px;
+}
+
+.text {
+  border: 1px dotted gray;
+  border-radius: 20px;
+}
+
+.add-button {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  width: 150px;
+  height: 30px;
+  border: none;
+  text-transform: uppercase;
+  width: 50%;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.add-button:hover {
+  background-color: white;
+  border-top: 3px solid black;
+  color: black;
+}
+
+.comment {
+  padding: 10px;
+  margin: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.comment strong {
+  color: #333;
+  margin-right: 10px;
+}
+
+textarea#userComment {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}

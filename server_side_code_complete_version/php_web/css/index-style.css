@@ -103,13 +103,13 @@ footer {
   text-align: center;
 }
 
-.serv ul {
-  display: flex;
+.product-grid ul {
   flex-wrap: wrap;
   padding-left: 0;
+  display: flex;
 }
 
-.serv ul li {
+.product-grid ul li {
+  flex: 0 0 33.67%;
   list-style: none;
-  flex: 0 0 33.333333%;
 }

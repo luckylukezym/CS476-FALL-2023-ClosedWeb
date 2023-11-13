@@ -24,15 +24,20 @@
      ";
      $result = mysqli_query($connection, $query);
      while($row = mysqli_fetch_assoc($result)){
-      echo "
-             <div class='comment'>
-                <strong>[{$row['username']} - {$row['created_at']}]:</strong>
-                <p>{$row['content']}</p>
-             </div>
-      ";
+      echo  create_comment($row['username'], $row['created_at'], $row['content']);
      }
     }else{
       echo "xxxnxx";
+    }
+
+    
+    function create_comment($username, $created_at, $content){
+      return "
+             <div class='comment'>
+                <strong>[{$username} - {$created_at}]:</strong>
+                <p>{$content}</p>
+             </div>
+      ";
     }
 ?>
 

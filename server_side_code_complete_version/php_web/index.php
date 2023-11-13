@@ -76,7 +76,7 @@
       </p>
     </div>
 
-    <div class="serv">
+    <div class="product-grid">
       <ul class="product-container"> </ul>
     </div>
     <footer>
@@ -85,26 +85,41 @@
     </footer>
 
     <script>
-  let content = document.querySelector(".product-container");
-  let request = new XMLHttpRequest();
-  request.responseType = "text";
-  request.onreadystatechange = function(){
-    if(this.readyState == 4 && this.status == 200){
-      if(!String(this.responseText).includes("xxxnxx")){
-        content.innerHTML = this.responseText;
-      }
-    }
-  };
+
+    let request = display();
+    get_state(content.childElementCount);
+
+
      // prefetch products
     request.open("POST", "index_process.php", true);
     request.setRequestHeader("content-type","application/x-www-form-urlencoded");
     request.send(`num_product=${content.childElementCount}`);
+  
 
-  setInterval(() => {
+    function display(){
+      let content = document.querySelector(".product-container");
+      let request = new XMLHttpRequest();
+      request.responseType = "text";
+      request.onreadystatechange = function(){
+      if(this.readyState == 4 && this.status == 200){
+       if(!String(this.responseText).includes("xxxnxx")){
+        content.innerHTML = this.responseText;
+      }
+    }
+   };
+   return request;
+  }
+
+  function get_state(num_product){
+    setInterval(() => {
     request.open("POST", "index_process.php", true);
     request.setRequestHeader("content-type","application/x-www-form-urlencoded");
-    request.send(`num_product=${content.childElementCount}`);
+    request.send(`num_product=${num_product}`);
   }, 5000);
+  get_state(content.childElementCount);
+  }
+
  </script>
   </body>
 </html>
+

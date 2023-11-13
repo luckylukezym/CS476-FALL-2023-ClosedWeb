@@ -31,22 +31,63 @@ let matching_password = function (password_1, password_2) {
 /**********************************
  *          event listeners
  * ******************************** */
-submit_button.addEventListener("click", (e) => {
-  if (!correct_email(email_input.value)) {
-    email_err.classList.remove("hidden");
-  }
-
-  if (!correct_password(password_input.value)) {
-    password_err.classList.remove("hidden");
-  }
-
-  if (!matching_password(password_input.value, repassword_input.value)) {
-    repassword_err.classList.remove("hidden");
-  }
-});
 
 reset_button.addEventListener("click", (e) => {
   email_err.classList.add("hidden");
+  email_input.value = "";
   password_err.classList.add("hidden");
+  password_input.value = "";
   repassword_err.classList.add("hidden");
+  repassword_input.value = "";
+});
+
+email_input.addEventListener("input", (e) => {
+  if (!correct_email(email_input.value)) {
+    email_err.classList.remove("hidden");
+  } else {
+    email_err.classList.add("hidden");
+  }
+  if (
+    correct_email(email_input.value) &&
+    correct_password(password_input.value) &&
+    matching_password(password_input.value, repassword_input.value)
+  ) {
+    submit_button.classList.remove("hidden");
+  } else {
+    submit_button.classList.add("hidden");
+  }
+});
+
+password_input.addEventListener("input", (e) => {
+  if (!correct_password(password_input.value)) {
+    password_err.classList.remove("hidden");
+  } else {
+    password_err.classList.add("hidden");
+  }
+  if (
+    correct_email(email_input.value) &&
+    correct_password(password_input.value) &&
+    matching_password(password_input.value, repassword_input.value)
+  ) {
+    submit_button.classList.remove("hidden");
+  } else {
+    submit_button.classList.add("hidden");
+  }
+});
+
+repassword_input.addEventListener("input", (e) => {
+  if (!matching_password(password_input.value, repassword_input.value)) {
+    repassword_err.classList.remove("hidden");
+  } else {
+    repassword_err.classList.add("hidden");
+  }
+  if (
+    correct_email(email_input.value) &&
+    correct_password(password_input.value) &&
+    matching_password(password_input.value, repassword_input.value)
+  ) {
+    submit_button.classList.remove("hidden");
+  } else {
+    submit_button.classList.add("hidden");
+  }
 });

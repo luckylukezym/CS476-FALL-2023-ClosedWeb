@@ -36,11 +36,6 @@
 <h1>Your Cart</h1>
 
 <div class="main">
-    <form id="search">
-        <i class="fa fa-search"></i>
-        <input type="search" id="searchbar" placeholder="Search...">
-        <br><br>
-    </form>
 
 <div class="left"></div>
 <main class="main-center">
@@ -63,19 +58,19 @@
                 <option value="Prepaid">Prepaid</option>
             </select>
             <br>
-            <input type="text" name='card_number' required placeholder="0000-0000-0000-0000"><br><br>
+            <input type="text" name='card_number' id="card_number" required placeholder="16 digit card number"><br><br>
 
             <label for="cname">Name on Card:</label><br>
-            <input type="text" placeholder="Stephen Anderson"><br><br>
+            <input type="text" id="name" placeholder="Stephen Anderson"><br><br>
 
             <label for="expDate">Exp date:</label><br>
-            <input type="text" placeholder="month/year"><br><br>
+            <input type="text" id="exp" placeholder="month/year"><br><br>
 
             <label for="CVV">CVV:</label><br>
-            <input type="text" placeholder="000"><br><br><br>
+            <input type="text" id="cvv" placeholder="000"><br><br><br>
             </div>
 
-            <input type="submit" value="Checkout" class="add-button" id='checkout-button'>
+            <input type="submit" value="Checkout" class="add-button hidden" id='checkout-button'>
     </form>
     </div>
     <br><br>
@@ -98,7 +93,10 @@
     request.send();
 
 </script>
+<script src="cart.js"></script>
 </body>
 </html>
+
+
 
 
